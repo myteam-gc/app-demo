@@ -3,13 +3,12 @@ package com.hnhy.ylfz.mvp.ui.fragment;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.hnhy.framework.frame.BaseFragment;
 import com.hnhy.ylfz.R;
+import com.hnhy.ylfz.mvp.ui.activity.ActivityDetailInBrowser;
 import com.hnhy.ylfz.mvp.ui.activity.user.ActivityModifyPwd;
 import com.hnhy.ylfz.mvp.ui.widget.NiceImageView;
 
@@ -63,6 +62,7 @@ public class MineFragment extends BaseFragment {
             case R.id.rl_feedback:
                 break;
             case R.id.rl_about:
+                ActivityDetailInBrowser.showDetail(mContext, "http://huiyunit.com/about.html#0", "关于");
                 break;
         }
     }

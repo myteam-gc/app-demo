@@ -2,10 +2,8 @@ package com.hnhy.ylfz.mvp.ui.activity;
 
 import android.content.Context;
 import android.content.Intent;
-import android.databinding.adapters.SeekBarBindingAdapter;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.webkit.WebChromeClient;
@@ -16,6 +14,7 @@ import android.widget.ProgressBar;
 
 import com.hnhy.framework.frame.BaseActivity;
 import com.hnhy.ylfz.R;
+import com.hnhy.ylfz.mvp.ui.widget.ToolBar;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -30,12 +29,20 @@ public class ActivityDetailInBrowser extends BaseActivity {
     ProgressBar mProgressBar;
     @BindView(R.id.webview_content)
     WebView mWebviewContent;
+    @BindView(R.id.toolbar)
+    ToolBar mToolbar;
 
     private String mUrl;
+    private String mTitle;
 
     public static void showDetail(Context context, String url) {
+        showDetail(context, url, "详情");
+    }
+
+    public static void showDetail(Context context, String url, String title) {
         Intent intent = new Intent(context, ActivityDetailInBrowser.class);
         intent.putExtra("url", url);
+        intent.putExtra("title", title);
         context.startActivity(intent);
     }
 
@@ -57,14 +64,14 @@ public class ActivityDetailInBrowser extends BaseActivity {
         webSettings.setJavaScriptCanOpenWindowsAutomatically(true);
         webSettings.setLoadsImagesAutomatically(true);
         webSettings.setJavaScriptEnabled(true);
-        mWebviewContent.setWebChromeClient(new WebChromeClient(){
+        mWebviewContent.setWebChromeClient(new WebChromeClient() {
             @Override
             public void onProgressChanged(WebView view, int newProgress) {
                 super.onProgressChanged(view, newProgress);
                 mProgressBar.setProgress(newProgress);
-                if (newProgress<100){
+                if (newProgress < 100) {
                     mProgressBar.setVisibility(View.VISIBLE);
-                }else {
+                } else {
                     mProgressBar.setVisibility(View.GONE);
                 }
             }
@@ -75,7 +82,9 @@ public class ActivityDetailInBrowser extends BaseActivity {
     private void initView() {
         setLightStatusBar();
         mUrl = getIntent().getStringExtra("url");
+        mTitle = getIntent().getStringExtra("title");
         mProgressBar.setVisibility(View.VISIBLE);
+        mToolbar.setTitle(mTitle);
     }
 
     // 覆盖Activity类的onKeyDown(int keyCoder,KeyEvent event)方法

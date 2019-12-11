@@ -55,6 +55,7 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
         fragments.add(new MineFragment());
         ViewPageAdapter adapter = new ViewPageAdapter(getSupportFragmentManager(), fragments);
         mVpContent.setAdapter(adapter);
+        mVpContent.setOffscreenPageLimit(4);
         mNavView.setOnNavigationItemSelectedListener(this);
     }
 

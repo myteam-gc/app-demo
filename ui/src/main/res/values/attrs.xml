@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ViewCommonTitle">
+        <attr name="titles" format="reference"></attr>
+    </declare-styleable>
+
+    <!--圆角ImageView-->
+    <declare-styleable name="RoundImageView">
+        <attr name="borderRadius" />
+        <attr name="type" />
+    </declare-styleable>
+    <attr name="borderRadius" format="dimension" />
+    <attr name="type">
+        <enum name="circle" value="0" />
+        <enum name="round" value="1" />
+    </attr>
+    <!--可滑动的切换的CardView-->
+    <declare-styleable name="SwipeFlingAdapterView">
+        <attr name="y_offset_step" format="dimension" />
+        <attr name="rotation_degrees" format="float" />
+        <attr name="min_adapter_stack" format="integer" />
+        <attr name="max_visible" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomSpinner">
+        <attr name="assets_name" format="string" />
+    </declare-styleable>
+
+    <!--自定义键盘-->
+    <declare-styleable name="MyKeyBoardView">
+        <attr name="labelTextSize" format="dimension"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="UpdateAppNumberProgressBar">
+        <attr name="progress_current" format="integer" />
+        <attr name="progress_max" format="integer" />
+
+        <attr name="progress_unreached_color" format="color" />
+        <attr name="progress_reached_color" format="color" />
+
+        <attr name="progress_reached_bar_height" format="dimension" />
+        <attr name="progress_unreached_bar_height" format="dimension" />
+
+        <attr name="progress_text_size" format="dimension" />
+        <attr name="progress_text_color" format="color" />
+
+        <attr name="progress_text_offset" format="dimension" />
+
+        <attr name="progress_text_visibility" format="enum">
+            <enum name="visible" value="0" />
+            <enum name="invisible" value="1" />
+        </attr>
+    </declare-styleable>
+    <attr name="title" format="reference|string"/>
+    <attr name="titleTextColor" format="color"/>
+    <declare-styleable name="ViewRichText">
+        <attr name="title" />
+        <attr name="content"  />
+        <attr name="titleTextColor" />
+        <attr name="contentTextColor" format="color" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,41 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.1'
+        
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+ext {
+    applicationId= "com.hnhy.ylfz"
+    compileSdkVersion = 28
+    buildToolsVersion = "28.0.3"
+    targetSdkVersion = 28
+    minSdkVersion = 21
+    versionCode = 1
+    versionName = "1.0"
+    beta_number = 1
+    beta_name = "1.00"
+
+
+    clientVersion = "1.2.0"
+    supportLibVersion = "28.0.0"
+}

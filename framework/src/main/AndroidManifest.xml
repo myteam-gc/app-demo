@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hnhy.framework">
+
+    <application>
+        <activity android:name=".view.ActivityAdmin" />
+
+        <service android:name=".system.download.ServiceDownload" />
+        <activity
+            android:name="com.hnhy.framework.system.permission.ActivityHook"
+            android:launchMode="singleTask"
+            android:theme="@style/app_transparent_activity"
+            android:windowSoftInputMode="adjustPan" />
+        <service
+            android:name=".system.push.PushService"
+            android:enabled="true"
+            android:process=":push" />
+        <service
+            android:name=".system.push.PushService$GrayInnerService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":push" />
+        <service
+            android:name="org.eclipse.paho.android.service.MqttService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":push" />
+        <!--数据共享-->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+</manifest>

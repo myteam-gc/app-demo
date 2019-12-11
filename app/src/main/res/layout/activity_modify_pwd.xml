@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".mvp.ui.activity.user.ActivityModifyPwd">
+
+    <com.hnhy.ylfz.mvp.ui.widget.ToolBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:leftType="finish"
+        app:title="@string/str_title_modify_pwd" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/StyleCommonText"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/dimen_30dp"
+            android:minWidth="@dimen/dimen_75dp"
+            android:text="@string/str_pwd_old" />
+
+        <EditText
+            android:id="@+id/et_pwd_old"
+            style="@style/EditTextStyle.WithoutBg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/str_pwd_hint_old"
+            android:inputType="textPassword"
+            android:maxLength="20" />
+
+    </LinearLayout>
+
+    <View style="@style/StyleDivider.Light" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/StyleCommonText"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/dimen_30dp"
+            android:minWidth="@dimen/dimen_75dp"
+            android:text="@string/str_pwd_new" />
+
+        <EditText
+            android:id="@+id/et_pwd_new"
+            style="@style/EditTextStyle.WithoutBg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/str_pwd_hint_new"
+            android:inputType="textPassword"
+            android:maxLength="20" />
+    </LinearLayout>
+
+    <View style="@style/StyleDivider.Light" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/StyleCommonText"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/dimen_30dp"
+            android:minWidth="@dimen/dimen_75dp"
+            android:text="@string/str_pwd_confirm" />
+
+        <EditText
+            android:id="@+id/et_pwd_confirm"
+            style="@style/EditTextStyle.WithoutBg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/str_pwd_hint_confirm"
+            android:inputType="textPassword"
+            android:maxLength="20" />
+    </LinearLayout>
+
+    <View style="@style/StyleDivider.Light" />
+
+    <TextView
+        style="@style/StyleCommonText.Red"
+        android:layout_marginStart="@dimen/dimen_30dp"
+        android:gravity="center"
+        android:minWidth="@dimen/dimen_75dp"
+        android:minHeight="@dimen/dimen_50dp"
+        android:text="@string/str_pwd_hint" />
+
+    <Button
+        android:id="@+id/btn_pwd_save"
+        style="@style/StyleCommonBtn"
+        android:layout_margin="@dimen/dimen_30dp"
+        android:text="@string/str_save" />
+
+</LinearLayout>

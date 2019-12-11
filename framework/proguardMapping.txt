@@ -1,0 +1,239 @@
+# compiler: R8
+# compiler_version: 1.4.94
+# min_api: 1
+com.hnhy.framework.Configuration -> com.hnhy.framework.a:
+    int getCurrentModel() -> a
+    boolean isEnableLog() -> b
+    boolean isEnableSaveCrashLog() -> c
+com.hnhy.framework.Engine -> com.hnhy.framework.b:
+    android.content.Context mContext -> b
+    com.hnhy.framework.Configuration mConfiguration -> c
+    com.hnhy.framework.Engine mInstance -> a
+    1:2:com.hnhy.framework.Engine getInstance():48:49 -> a
+com.hnhy.framework.frame.BaseActivity -> com.hnhy.framework.frame.BaseActivity:
+    android.content.Context mContext -> b
+    com.hnhy.ui.dialog.LoadingDialog mLoadingDialog -> a
+    1:1:void <init>():23:23 -> <init>
+    1:1:com.hnhy.framework.frame.BaseSystem getSystem(java.lang.Class):92:92 -> a
+    1:3:void onBackPressed():44:46 -> onBackPressed
+    4:4:void onBackPressed():48:48 -> onBackPressed
+    1:3:void onCreate(android.os.Bundle):31:33 -> onCreate
+    1:3:void onDestroy():53:55 -> onDestroy
+    1:2:void onStart():38:39 -> onStart
+com.hnhy.framework.frame.BaseSystem -> com.hnhy.framework.frame.a:
+    android.content.Context mContext -> a
+    1:1:void <init>():12:12 -> <init>
+    1:2:void createSystem():19:20 -> a
+    3:3:com.hnhy.framework.frame.BaseSystem getSystem(java.lang.Class):34:34 -> a
+    void init() -> b
+com.hnhy.framework.frame.ISystem -> com.hnhy.framework.frame.b:
+com.hnhy.framework.frame.SystemManager -> com.hnhy.framework.frame.c:
+    java.util.HashMap mSystemPool -> b
+    com.hnhy.framework.frame.SystemManager mInstance -> a
+    1:2:void <init>():18:19 -> <init>
+    3:3:void <init>():21:21 -> <init>
+    1:4:com.hnhy.framework.frame.SystemManager getInstance():25:28 -> a
+    5:5:com.hnhy.framework.frame.SystemManager getInstance():30:30 -> a
+    6:6:com.hnhy.framework.frame.BaseSystem getSystem(java.lang.Class):54:54 -> a
+    7:9:com.hnhy.framework.frame.BaseSystem getSystem(java.lang.Class):57:59 -> a
+    10:10:com.hnhy.framework.frame.BaseSystem getSystem(java.lang.Class):61:61 -> a
+com.hnhy.framework.logger.Logger -> com.hnhy.framework.a.a:
+    1:1:void d(java.lang.String,java.lang.String):22:22 -> a
+    1:1:void i(java.lang.String,java.lang.String):16:16 -> b
+com.hnhy.framework.system.SystemCrash -> com.hnhy.framework.b.b:
+    java.lang.Thread$UncaughtExceptionHandler mDefaultHandler -> b
+    java.lang.String mBaseMessage -> c
+    1:1:void <init>():19:19 -> <init>
+    1:1:void init():25:25 -> b
+    2:3:void init():27:28 -> b
+    1:1:java.lang.String getBaseMessage():60:60 -> c
+    2:5:java.lang.String getBaseMessage():62:65 -> c
+    6:6:java.lang.String getBaseMessage():67:67 -> c
+    1:6:java.util.HashMap getBaseMessageMap():71:76 -> d
+com.hnhy.framework.system.SystemCrash$1 -> com.hnhy.framework.b.a:
+    com.hnhy.framework.system.SystemCrash this$0 -> a
+    1:1:void <init>(com.hnhy.framework.system.SystemCrash):28:28 -> <init>
+    1:1:void uncaughtException(java.lang.Thread,java.lang.Throwable):32:32 -> uncaughtException
+com.hnhy.framework.system.SystemHttp -> com.hnhy.framework.b.d:
+    okhttp3.OkHttpClient mOkHttpClient -> b
+    java.util.Map mPoolCall -> c
+    com.google.gson.Gson mGson -> d
+    1:1:void <init>():43:43 -> <init>
+    1:1:void cancelRequest(java.lang.Object):157:157 -> a
+    2:4:void cancelRequest(java.lang.Object):159:161 -> a
+    5:5:void cancelRequest(java.lang.Object):164:164 -> a
+    1:3:void init():54:56 -> b
+    1:1:okhttp3.logging.HttpLoggingInterceptor createHttpLoggingInterceptor():189:189 -> c
+    2:2:okhttp3.logging.HttpLoggingInterceptor createHttpLoggingInterceptor():195:195 -> c
+    1:7:okhttp3.OkHttpClient createOkHttpClient():179:185 -> d
+com.hnhy.framework.system.SystemHttp$3 -> com.hnhy.framework.b.c:
+    com.hnhy.framework.system.SystemHttp this$0 -> a
+    1:1:void <init>(com.hnhy.framework.system.SystemHttp):189:189 -> <init>
+    1:1:void log(java.lang.String):192:192 -> log
+com.hnhy.framework.system.SystemPager -> com.hnhy.framework.b.e:
+    java.util.List mList -> b
+    android.app.Activity mCurrActivity -> c
+    1:1:void <init>():12:12 -> <init>
+    1:1:void addActivity(android.app.Activity):32:32 -> a
+    1:1:void init():20:20 -> b
+    2:2:void removeActivity(android.app.Activity):40:40 -> b
+    1:1:android.app.Activity getCurrActivity():51:51 -> c
+com.hnhy.framework.system.SystemPermission -> com.hnhy.framework.b.f:
+    com.hnhy.framework.system.permission.CallbackPermission mCallbackPermission -> f
+    java.util.Set mManifestPermissions -> d
+    java.util.List mDeniedPermissions -> c
+    com.hnhy.framework.system.permission.PermissionOption mPermissionOption -> e
+    android.app.Activity mHookActivity -> b
+    1:1:void <init>():34:34 -> <init>
+    1:7:void onRequestPermissionsResult(int,java.lang.String[],int[]):72:78 -> a
+    8:13:void onRequestPermissionsResult(int,java.lang.String[],int[]):81:86 -> a
+    14:14:void checkRequestPermissionRationale(android.app.Activity):93:93 -> a
+    15:16:void checkRequestPermissionRationale(android.app.Activity):96:97 -> a
+    17:17:void checkRequestPermissionRationale(android.app.Activity):99:99 -> a
+    18:18:void checkRequestPermissionRationale(android.app.Activity):103:103 -> a
+    19:19:void checkRequestPermissionRationale(android.app.Activity):101:101 -> a
+    20:20:void onActivityResult(int,int,android.content.Intent):115:115 -> a
+    21:21:void onActivityResult(int,int,android.content.Intent):120:120 -> a
+    22:22:void onActivityResult(int,int,android.content.Intent):117:117 -> a
+    23:23:boolean shouldShowRequestPermissionRationale(android.app.Activity,java.lang.String):152:152 -> a
+    24:25:void showRationalDialog(java.lang.String[]):204:205 -> a
+    26:27:void showDeniedDialog(java.util.List):220:221 -> a
+    28:28:void requestPermissions(android.app.Activity,java.lang.String[],int):275:275 -> a
+    1:3:void init():47:49 -> b
+    1:4:void checkSelfPermission():124:127 -> c
+    5:5:void checkSelfPermission():130:130 -> c
+    1:3:void destroyHookActivity():267:269 -> d
+    4:4:void destroyHookActivity():271:271 -> d
+    1:2:void getManifestPermissions():159:160 -> e
+    3:3:void getManifestPermissions():159:159 -> e
+    4:4:void getManifestPermissions():162:162 -> e
+    5:5:void getManifestPermissions():165:165 -> e
+    6:7:void getManifestPermissions():167:168 -> e
+com.hnhy.framework.system.SystemWaterMark -> com.hnhy.framework.b.g:
+    java.lang.String mWaterMarkText -> c
+    boolean mEnable -> b
+    1:1:void <init>():13:13 -> <init>
+    void init() -> b
+    1:23:void onActivityStart():31:53 -> c
+com.hnhy.framework.system.download.ServiceDownload -> com.hnhy.framework.system.download.ServiceDownload:
+    1:1:void <init>():12:12 -> <init>
+    1:1:boolean bindService(android.content.Intent,android.content.ServiceConnection,int):74:74 -> bindService
+    1:1:android.os.IBinder onBind(android.content.Intent):87:87 -> onBind
+    1:2:void onCreate():19:20 -> onCreate
+    1:1:int onStartCommand(android.content.Intent,int,int):68:68 -> onStartCommand
+    1:1:boolean onUnbind(android.content.Intent):93:93 -> onUnbind
+    1:2:void unbindService(android.content.ServiceConnection):80:81 -> unbindService
+com.hnhy.framework.system.download.Task -> com.hnhy.framework.system.download.Task:
+    java.lang.String msg -> h
+    int progress -> i
+    int status -> f
+    int type_callback -> g
+    java.lang.String saveFileDir -> c
+    java.lang.String url -> b
+    java.lang.String saveFilePath -> e
+    int tag -> a
+    java.lang.String saveFileName -> d
+    1:1:void <clinit>():10:10 -> <clinit>
+    1:1:void <init>():31:31 -> <init>
+    2:11:void <init>(android.os.Parcel):34:43 -> <init>
+    1:1:java.lang.String toString():48:48 -> toString
+    1:9:void writeToParcel(android.os.Parcel,int):68:76 -> writeToParcel
+com.hnhy.framework.system.download.Task$1 -> com.hnhy.framework.system.download.a:
+    1:1:void <init>():10:10 -> <init>
+    1:1:java.lang.Object createFromParcel(android.os.Parcel):10:10 -> createFromParcel
+    2:2:com.hnhy.framework.system.download.Task createFromParcel(android.os.Parcel):13:13 -> createFromParcel
+    1:1:java.lang.Object[] newArray(int):10:10 -> newArray
+    2:2:com.hnhy.framework.system.download.Task[] newArray(int):18:18 -> newArray
+com.hnhy.framework.system.permission.ActivityHook -> com.hnhy.framework.system.permission.ActivityHook:
+    1:1:void <init>():16:16 -> <init>
+    1:1:void onActivityResult(int,int,android.content.Intent):39:39 -> onActivityResult
+    1:2:void onCreate(android.os.Bundle):19:20 -> onCreate
+    3:3:void onCreate(android.os.Bundle):22:22 -> onCreate
+    1:2:void onNewIntent(android.content.Intent):27:28 -> onNewIntent
+    1:2:void onRequestPermissionsResult(int,java.lang.String[],int[]):33:34 -> onRequestPermissionsResult
+com.hnhy.framework.system.permission.CallbackPermission -> com.hnhy.framework.system.permission.a:
+    void onGranted() -> a
+com.hnhy.framework.system.permission.PermissionOption -> com.hnhy.framework.system.permission.b:
+    java.lang.String getDeniedMessage() -> a
+    java.lang.String[] getPermissions() -> b
+    java.lang.String getRationalMessage() -> c
+com.hnhy.framework.system.push.PushMessage -> com.hnhy.framework.system.push.PushMessage:
+    java.lang.String content -> g
+    java.lang.String titleNew -> f
+    java.lang.String createTime -> i
+    java.lang.String status -> h
+    java.lang.String sfry -> j
+    java.lang.String id -> a
+    java.lang.String sourceId -> b
+    int noticeType -> c
+    java.lang.String title -> e
+    java.lang.String noticeTypeDesc -> d
+    1:1:void <clinit>():11:11 -> <clinit>
+    1:1:void <init>():49:49 -> <init>
+    2:12:void <init>(android.os.Parcel):52:62 -> <init>
+    1:10:void writeToParcel(android.os.Parcel,int):72:81 -> writeToParcel
+com.hnhy.framework.system.push.PushMessage$1 -> com.hnhy.framework.system.push.a:
+    1:1:void <init>():11:11 -> <init>
+    1:1:java.lang.Object createFromParcel(android.os.Parcel):11:11 -> createFromParcel
+    2:2:com.hnhy.framework.system.push.PushMessage createFromParcel(android.os.Parcel):14:14 -> createFromParcel
+    1:1:java.lang.Object[] newArray(int):11:11 -> newArray
+    2:2:com.hnhy.framework.system.push.PushMessage[] newArray(int):19:19 -> newArray
+com.hnhy.framework.system.push.PushService -> com.hnhy.framework.system.push.PushService:
+    1:1:void <init>():57:57 -> <init>
+    1:1:android.os.IBinder onBind(android.content.Intent):160:160 -> onBind
+    1:2:void onCreate():88:89 -> onCreate
+    1:4:void onDestroy():182:185 -> onDestroy
+    5:7:void onDestroy():187:189 -> onDestroy
+    1:1:int onStartCommand(android.content.Intent,int,int):173:173 -> onStartCommand
+    1:1:boolean onUnbind(android.content.Intent):166:166 -> onUnbind
+com.hnhy.framework.system.push.PushService$GrayInnerService -> com.hnhy.framework.system.push.PushService$GrayInnerService:
+    1:1:void <init>():494:494 -> <init>
+    1:4:int onStartCommand(android.content.Intent,int,int):503:506 -> onStartCommand
+com.hnhy.framework.system.upgrade.BeanVersion -> com.hnhy.framework.system.upgrade.BeanVersion:
+    java.lang.String updateJournal -> g
+    java.lang.String newVersion -> f
+    java.lang.String mSaveFileName -> i
+    java.lang.String mSaveFileDir -> h
+    boolean needUpdate -> a
+    java.lang.String fileUrl -> c
+    boolean forceUpdate -> b
+    java.lang.String fileSize -> e
+    java.lang.String fileMd5 -> d
+    1:1:void <clinit>():13:13 -> <clinit>
+    1:10:void <init>(android.os.Parcel):34:43 -> <init>
+    1:9:void writeToParcel(android.os.Parcel,int):53:61 -> writeToParcel
+com.hnhy.framework.system.upgrade.BeanVersion$1 -> com.hnhy.framework.system.upgrade.a:
+    1:1:void <init>():13:13 -> <init>
+    1:1:java.lang.Object createFromParcel(android.os.Parcel):13:13 -> createFromParcel
+    2:2:com.hnhy.framework.system.upgrade.BeanVersion createFromParcel(android.os.Parcel):16:16 -> createFromParcel
+    1:1:java.lang.Object[] newArray(int):13:13 -> newArray
+    2:2:com.hnhy.framework.system.upgrade.BeanVersion[] newArray(int):21:21 -> newArray
+com.hnhy.framework.util.FrameworkUtils$App -> com.hnhy.framework.c.a:
+    1:1:int getVersionCode():231:231 -> a
+    2:2:int getVersionCode(java.lang.String):254:254 -> a
+    3:5:int getVersionCode(java.lang.String):256:258 -> a
+    6:6:int getVersionCode(java.lang.String):260:260 -> a
+    1:1:java.lang.String getVersionName():227:227 -> b
+    2:2:java.lang.String getVersionName(java.lang.String):242:242 -> b
+    3:5:java.lang.String getVersionName(java.lang.String):244:246 -> b
+    6:6:java.lang.String getVersionName(java.lang.String):248:248 -> b
+com.hnhy.framework.view.ActivityAdmin -> com.hnhy.framework.view.ActivityAdmin:
+    android.support.v7.widget.AppCompatSpinner mSpinnerModel -> f
+    android.widget.EditText mUrl -> j
+    com.hnhy.framework.Configuration mConfiguration -> e
+    android.support.v7.widget.AppCompatSpinner mSpinnerLog -> g
+    android.support.v7.widget.AppCompatSpinner mSpinnerCrashLog -> h
+    boolean mFlagFirst -> k
+    android.support.v7.widget.AppCompatSpinner mSpinnerCrashRestart -> i
+    java.lang.String[] ARRAY_SWITCH -> d
+    java.lang.String[] ARRAY_MODELS -> c
+    1:2:void <clinit>():20:21 -> <clinit>
+    1:1:void <init>():19:19 -> <init>
+    2:2:void <init>():28:28 -> <init>
+    1:2:void onCreate(android.os.Bundle):36:37 -> onCreate
+    3:3:void onCreate(android.os.Bundle):39:39 -> onCreate
+    4:5:void onCreate(android.os.Bundle):41:42 -> onCreate
+    6:6:void onCreate(android.os.Bundle):44:44 -> onCreate
+    7:10:void onCreate(android.os.Bundle):46:49 -> onCreate
+    11:14:void onCreate(android.os.Bundle):51:54 -> onCreate
+    15:15:void onCreate(android.os.Bundle):56:56 -> onCreate

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorGray" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorWhite"
+        android:gravity="center"
+
+        android:text="快捷输入键盘" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.75dp"
+        android:background="@color/colorKeyboardBg" />
+
+    <com.hnhy.ui.customkeyboard.idcard.KeyBoardIdCardNumberView
+        android:id="@+id/my_kv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.hnhy.ui.customkeyboard.idcard.KeyBoardIdCardNumberView>
+</LinearLayout>

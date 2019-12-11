@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".mvp.ui.activity.MainActivity">
+    <com.hnhy.ylfz.mvp.ui.widget.ToolBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="@string/home"
+        app:rightType="icon"
+        app:rightIcon="@drawable/selector_btn_msg"
+        app:styleType="light"
+        />
+    <com.hnhy.ui.NoScrollViewPager
+        android:id="@+id/vp_content"
+        style="@style/NoEdgeRecycleView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+    <View
+        android:id="@+id/view_divide"
+        style="@style/StyleDivider.Light" />
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_60dp"
+        app:itemIconTint="@drawable/selector_tab_color"
+        app:itemTextColor="@drawable/selector_tab_color"
+        app:menu="@menu/nav_bottom_menu"/>
+
+</LinearLayout>

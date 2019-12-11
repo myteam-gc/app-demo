@@ -1,6 +1,7 @@
 package com.hnhy.ylfz.mvp.ui.widget;
 
 import android.content.Context;
+import android.content.pm.ActivityInfo;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.support.annotation.NonNull;
@@ -22,6 +23,9 @@ import com.hnhy.framework.system.SystemImageLoader;
 import com.hnhy.framework.util.FrameworkUtils;
 import com.hnhy.ylfz.R;
 import com.hnhy.ylfz.mvp.ui.widget.banner.WeakHandler;
+
+import org.salient.artplayer.VideoView;
+import org.salient.artplayer.ui.ControlPanel;
 
 import java.io.IOException;
 
@@ -94,6 +98,7 @@ public class VideoPlayView2 extends FrameLayout implements View.OnClickListener,
                 break;
             case R.id.btn_fullscreen://全屏播放
                 FrameworkUtils.Toast.showShort("全屏播放");
+                fullScreenPlay();
                 break;
             default:
                 break;
@@ -296,5 +301,13 @@ public class VideoPlayView2 extends FrameLayout implements View.OnClickListener,
     private void reset() {
         mIvScreenshot.setVisibility(View.VISIBLE);
         mIvPlay.setVisibility(View.VISIBLE);
+    }
+
+    private void fullScreenPlay() {
+        VideoView videoView = new VideoView(mContext);
+        videoView.setUp(mUrl);
+        videoView.setControlPanel(new ControlPanel(mContext));
+        videoView.start();
+        videoView.startFullscreen(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE);
     }
 }

@@ -44,6 +44,7 @@
             android:screenOrientation="portrait" />
         <activity
             android:name="com.hnhy.ylfz.mvp.ui.activity.MainActivity"
+            android:configChanges="orientation|screenSize"
             android:screenOrientation="portrait" />
         <activity
             android:name="com.hnhy.ylfz.mvp.ui.activity.user.ActivityLogin"

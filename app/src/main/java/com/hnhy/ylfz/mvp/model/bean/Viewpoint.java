@@ -8,5 +8,6 @@ public class Viewpoint {
     public String title;//标题
     public String videoUrl;//视频url
     public int listPosition;//列表中位置
+    public String image;
 }
 

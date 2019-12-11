@@ -16,7 +16,6 @@ import com.hnhy.ui.adapter.CommonRecycleAdapter;
 import com.hnhy.ui.adapter.CommonViewHolder;
 import com.hnhy.ylfz.R;
 import com.hnhy.ylfz.mvp.model.bean.Viewpoint;
-import com.hnhy.ylfz.mvp.ui.widget.VideoPlayView2;
 
 import java.io.IOException;
 import java.util.List;
@@ -33,7 +32,8 @@ public class AdapterViewpoint2 extends CommonRecycleAdapter<Viewpoint> {
         super(context, dataList, R.layout.item_expert_viewpoint2);
         mPlayer = new MediaPlayer();
         mPlayer.setOnCompletionListener((mediaPlayer) -> {
-            mPlayer.release();
+            mCurrentPosition = -1;
+            notifyDataSetChanged();
         });
         mPlayer.setOnPreparedListener((mediaPlayer)->{
             mPlayer.start();
@@ -53,7 +53,7 @@ public class AdapterViewpoint2 extends CommonRecycleAdapter<Viewpoint> {
         SurfaceView surfaceView = holder.getView(R.id.surface_view);
         SurfaceHolder surfaceHolder = surfaceView.getHolder();
         ImageView ivScreenShot = holder.getView(R.id.iv_screenshot);
-        SystemManager.getInstance().getSystem(SystemImageLoader.class).loadVideoScreenshot(mContext, data.videoUrl, ivScreenShot, 1000);
+        SystemManager.getInstance().getSystem(SystemImageLoader.class).displayImage(mContext, ivScreenShot, data.videoUrl);
         ivScreenShot.setOnClickListener((view) -> {
             mCurrentPosition = position;
             notifyDataSetChanged();

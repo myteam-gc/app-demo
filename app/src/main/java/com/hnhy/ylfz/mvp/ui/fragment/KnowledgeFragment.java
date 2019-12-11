@@ -1,14 +1,9 @@
 package com.hnhy.ylfz.mvp.ui.fragment;
 
-import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 
 import com.hnhy.framework.frame.BaseFragment;
 import com.hnhy.ui.adapter.ViewPageAdapter;
@@ -23,7 +18,6 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 import butterknife.Unbinder;
 
 /**
@@ -43,6 +37,12 @@ public class KnowledgeFragment extends BaseFragment {
     @Override
     protected int getLayoutId() {
         return R.layout.fragment_knowledge;
+    }
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        if (mFragments != null) mFragments.get(0).setUserVisibleHint(isVisibleToUser);
     }
 
     @Override

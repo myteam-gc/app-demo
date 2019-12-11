@@ -84,8 +84,8 @@ public class FragmentExpertViewpoint extends LazyBaseFragment {
     private void generateData() {
         //假数据
         Viewpoint viewpoint = new Viewpoint();
-        viewpoint.title = "[新闻直播间]国家卫健委 全国目前无其他新增鼠疫病例报告";
-        viewpoint.videoUrl = "http://www.nhc.gov.cn/wjw/spxw/201911/52c264d7a5fa417da35de9fac6270064/files/a2479589339246268c3b490fda077ab3.mp4";
+        viewpoint.title = "2020，向火星进发！中国探测火星飞控团队惊艳亮相";
+        viewpoint.videoUrl = "http://vd3.bdstatic.com/mda-jmak78f83ncdwp4j/sc/mda-jmak78f83ncdwp4j.mp4";
         viewpoint.image = Constant.DEFAULT_PICTURE;
         mDatas.add(viewpoint);
         viewpoint = new Viewpoint();

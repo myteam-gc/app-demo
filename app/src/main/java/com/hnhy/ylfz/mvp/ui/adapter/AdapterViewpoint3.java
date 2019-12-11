@@ -97,7 +97,7 @@ public class AdapterViewpoint3 extends CommonRecycleAdapter<Viewpoint> {
                 //set LayoutParams
                 FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(16 * 45, 9 * 45);
                 layoutParams.gravity = Gravity.TOP | Gravity.CENTER;
-                layoutParams.setMargins(0, ImageUtils.dp2px(mContext, 70), 0, 0);
+                layoutParams.setMargins(0, ImageUtils.dp2px(mContext, 110), 0, 0);
                 //start tiny window
                 tinyVideoView.startTinyWindow(layoutParams);
             }

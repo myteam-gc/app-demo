@@ -8,20 +8,12 @@ import android.view.View;
 
 import com.hnhy.framework.frame.LazyBaseFragment;
 import com.hnhy.ylfz.R;
-import com.hnhy.ylfz.mvp.model.bean.Forum;
 import com.hnhy.ylfz.mvp.model.bean.Viewpoint;
-import com.hnhy.ylfz.mvp.ui.adapter.AdapterForum;
-import com.hnhy.ylfz.mvp.ui.adapter.AdapterViewpoint;
 import com.hnhy.ylfz.mvp.ui.adapter.AdapterViewpoint2;
-import com.hnhy.ylfz.mvp.ui.adapter.AdapterViewpoint3;
 import com.hnhy.ylfz.mvp.ui.widget.ViewNoData;
 import com.scwang.smart.refresh.layout.SmartRefreshLayout;
 import com.scwang.smart.refresh.layout.api.RefreshLayout;
 import com.scwang.smart.refresh.layout.listener.OnRefreshListener;
-
-import org.salient.artplayer.MediaPlayerManager;
-import org.salient.artplayer.OnWindowDetachedListener;
-import org.salient.artplayer.VideoView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,7 +36,7 @@ public class FragmentExpertViewpoint extends LazyBaseFragment {
     Unbinder unbinder;
     private List<Viewpoint> mDatas;
 //    private AdapterViewpoint mAdapter;
-    private AdapterViewpoint mAdapter;
+private AdapterViewpoint2 mAdapter;
     public static FragmentExpertViewpoint getInstance() {
         FragmentExpertViewpoint viewpoint = new FragmentExpertViewpoint();
         return viewpoint;
@@ -81,7 +73,7 @@ public class FragmentExpertViewpoint extends LazyBaseFragment {
         viewpoint.videoUrl = "http://www.nhc.gov.cn/wjw/spxw/201911/afbb4e141fb54f6384a657c3ca1297ab/files/da9382a0d58a442ebe79f7c71483493c.mp4";
         mDatas.add(viewpoint);
 
-        mAdapter = new AdapterViewpoint(mcontext,mDatas);
+        mAdapter = new AdapterViewpoint2(mcontext, mDatas);
         mRcvContent.setLayoutManager(new LinearLayoutManager(mcontext));
         mRcvContent.setAdapter(mAdapter);
         mViewNoData.setVisibility(mAdapter.getItemCount()>0?View.GONE:View.VISIBLE);

@@ -9,8 +9,8 @@ import android.widget.TextView;
 
 import com.hnhy.framework.frame.BaseFragment;
 import com.hnhy.ylfz.R;
-import com.hnhy.ylfz.mvp.ui.activity.ActivityConsultService;
 import com.hnhy.ylfz.mvp.ui.activity.ActivityDetailInBrowser;
+import com.hnhy.ylfz.mvp.ui.activity.consult.ActivityConsultService;
 import com.hnhy.ylfz.mvp.ui.activity.user.ActivityModifyPwd;
 import com.hnhy.ylfz.mvp.ui.widget.NiceImageView;
 

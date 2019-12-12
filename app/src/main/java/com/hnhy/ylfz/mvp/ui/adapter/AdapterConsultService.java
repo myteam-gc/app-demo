@@ -6,6 +6,7 @@ import com.hnhy.ui.adapter.CommonRecycleAdapter;
 import com.hnhy.ui.adapter.CommonViewHolder;
 import com.hnhy.ylfz.R;
 import com.hnhy.ylfz.mvp.model.bean.ConsultServiceHistory;
+import com.hnhy.ylfz.mvp.ui.activity.consult.ActivityConsultServiceDetail;
 
 import java.util.List;
 
@@ -26,6 +27,7 @@ public class AdapterConsultService extends CommonRecycleAdapter<ConsultServiceHi
         holder.setCommonClickListener(new CommonViewHolder.onItemCommonClickListener() {
             @Override
             public void onItemClickListener(int position) {
+                ActivityConsultServiceDetail.jump(mContext);
             }
 
             @Override

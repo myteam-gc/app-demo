@@ -4,7 +4,12 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import com.hnhy.framework.Engine;
+import com.hnhy.ylfz.mvp.model.bean.BeanSearch;
+
+import java.util.List;
 
 public class SharedPreferencesManager {
     private final static String SP_NAME_DEFAULT = "sp_cache";
@@ -19,10 +24,12 @@ public class SharedPreferencesManager {
     private static final String KEY_IS_FIRST_LOGIN = "is_first_login";
     private static final String KEY_IS_REMIND_ASSISTANT = "is_remind_assistant";
     private static final String KEY_IS_COPY_PEOPLE = "key_is_copy_people";
+    private static final String KEY_SEARCH = "key_search";
     private String TAG = "PreferenceUser";
-
+    private Gson mGson;
     private SharedPreferencesManager() {
         mSharedPreferences = Engine.getInstance().mContext.getSharedPreferences(SP_NAME_DEFAULT, Context.MODE_PRIVATE);
+        mGson = new Gson();
     }
 
     public static SharedPreferencesManager getInstance() {
@@ -90,5 +97,32 @@ public class SharedPreferencesManager {
 
     public String getCopyPeople() {
         return mSharedPreferences.getString(KEY_IS_COPY_PEOPLE, "");
+    }
+
+    /**
+     * 保存搜索条件信息
+     *
+     * @param search 保留最近搜索的20条
+     */
+    public void saveSearchHistory(BeanSearch search) {
+        SharedPreferences.Editor edit = mSharedPreferences.edit();
+        List<BeanSearch> searches = getSearchHistory();
+        if (searches.size() > 20) searches.remove(searches.size() - 1);
+        searches.add(0, search);
+        String content = mGson.toJson(searches);
+        edit.putString(KEY_SEARCH, content);
+        edit.apply();
+    }
+
+    public List<BeanSearch> getSearchHistory() {
+        String searches = mSharedPreferences.getString(KEY_SEARCH, "[]");
+        return mGson.fromJson(searches, new TypeToken<List<BeanSearch>>() {
+        }.getType());
+    }
+
+    public void clearSearchHistory() {
+        SharedPreferences.Editor edit = mSharedPreferences.edit();
+        edit.putString(KEY_SEARCH, "[]");
+        edit.apply();
     }
 }

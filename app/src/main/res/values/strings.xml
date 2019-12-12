@@ -29,6 +29,7 @@
     <string name="str_consult_service">咨询服务</string>
     <string name="str_my_feedback">我的反馈</string>
     <string name="str_about">关于</string>
+    <string name="str_search">搜索</string>
     <string name="index_monitor">指标监控</string>
     <string name="warning_index">警戒指标</string>
     <string name="str_index">%d / %d</string>
@@ -45,6 +46,8 @@
     <string name="start_now">立即开始</string>
     <string name="vip_service">VIP服务</string>
     <string name="service_history">服务历史</string>
+    <string name="service_history_detail">服务历史详情</string>
     <string name="vip_service_tips">享受每年4次的远程专家指导，快速响应，不用排队，以及1次现场指导。</string>
+    <string name="hint_search_history">请输入要搜索专家名称</string>
 
 </resources>

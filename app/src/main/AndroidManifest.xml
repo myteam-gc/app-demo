@@ -67,8 +67,16 @@
             android:description="@string/country_newsletter"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".mvp.ui.activity.ActivityConsultService"
+            android:name=".mvp.ui.activity.consult.ActivityConsultService"
             android:description="@string/str_consult_service"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.ui.activity.consult.ActivityConsultServiceDetail"
+            android:description="@string/service_history_detail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.ui.activity.consult.ActivityConsultServiceSearch"
+            android:description="@string/str_search"
             android:screenOrientation="portrait" />
     </application>
 

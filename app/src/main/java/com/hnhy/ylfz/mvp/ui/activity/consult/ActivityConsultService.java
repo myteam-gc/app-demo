@@ -1,5 +1,6 @@
-package com.hnhy.ylfz.mvp.ui.activity;
+package com.hnhy.ylfz.mvp.ui.activity.consult;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
@@ -21,6 +22,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * Created by guc on 2019/12/12.
@@ -63,6 +65,16 @@ public class ActivityConsultService extends BaseActivity {
         }, 1000);
     }
 
+    @OnClick({R.id.btn_start_now, R.id.iv_search})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.btn_start_now:
+                break;
+            case R.id.iv_search:
+                startActivity(new Intent(mContext, ActivityConsultServiceSearch.class));
+                break;
+        }
+    }
     private void initRecyclerView() {
         mServiceHistory = new ArrayList<>();
         mAdapter = new AdapterConsultService(mContext, mServiceHistory);
@@ -90,4 +102,5 @@ public class ActivityConsultService extends BaseActivity {
         mAdapter.notifyDataSetChanged();
         mViewNoData.setVisibility(mAdapter.getItemCount() > 0 ? View.GONE : View.VISIBLE);
     }
+
 }

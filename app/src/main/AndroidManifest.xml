@@ -66,6 +66,10 @@
             android:name=".mvp.ui.activity.ActivityCountryNewsletter"
             android:description="@string/country_newsletter"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.ui.activity.ActivityConsultService"
+            android:description="@string/str_consult_service"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

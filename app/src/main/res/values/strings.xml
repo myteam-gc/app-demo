@@ -26,6 +26,7 @@
     <string name="str_certified">已认证</string>
     <string name="str_uncertified">未认证</string>
     <string name="str_consult">专家咨询</string>
+    <string name="str_consult_service">咨询服务</string>
     <string name="str_my_feedback">我的反馈</string>
     <string name="str_about">关于</string>
     <string name="index_monitor">指标监控</string>
@@ -36,5 +37,14 @@
     <string name="country_policy">国家政策</string>
     <string name="inner_news">业内新闻</string>
     <string name="healthy_info">健康咨询</string>
+    <string name="tips_consult_service_1">享受专家远程咨询服务</string>
+    <string name="tips_consult_service_2">您已开通“国家绩效考核咨询 VIP服务”</string>
+    <string name="total_times">总次数</string>
+    <string name="used_times">已使用次数</string>
+    <string name="left_times">剩余次数</string>
+    <string name="start_now">立即开始</string>
+    <string name="vip_service">VIP服务</string>
+    <string name="service_history">服务历史</string>
+    <string name="vip_service_tips">享受每年4次的远程专家指导，快速响应，不用排队，以及1次现场指导。</string>
 
 </resources>

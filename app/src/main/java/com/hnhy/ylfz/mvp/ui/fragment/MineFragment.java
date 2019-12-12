@@ -1,5 +1,6 @@
 package com.hnhy.ylfz.mvp.ui.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -8,6 +9,7 @@ import android.widget.TextView;
 
 import com.hnhy.framework.frame.BaseFragment;
 import com.hnhy.ylfz.R;
+import com.hnhy.ylfz.mvp.ui.activity.ActivityConsultService;
 import com.hnhy.ylfz.mvp.ui.activity.ActivityDetailInBrowser;
 import com.hnhy.ylfz.mvp.ui.activity.user.ActivityModifyPwd;
 import com.hnhy.ylfz.mvp.ui.widget.NiceImageView;
@@ -55,6 +57,7 @@ public class MineFragment extends BaseFragment {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.rl_consult:
+                startActivity(new Intent(mContext, ActivityConsultService.class));
                 break;
             case R.id.rl_modify_pwd:
                 ActivityModifyPwd.jump(mContext);

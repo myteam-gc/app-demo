@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.hnhy.framework.frame.BaseFragment;
@@ -12,7 +13,6 @@ import com.hnhy.ylfz.R;
 import com.hnhy.ylfz.mvp.ui.activity.ActivityDetailInBrowser;
 import com.hnhy.ylfz.mvp.ui.activity.consult.ActivityConsultService;
 import com.hnhy.ylfz.mvp.ui.activity.user.ActivityModifyPwd;
-import com.hnhy.ylfz.mvp.ui.widget.NiceImageView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -25,7 +25,7 @@ import butterknife.Unbinder;
  */
 public class MineFragment extends BaseFragment {
     @BindView(R.id.iv_portrait)
-    NiceImageView mIvPortrait;
+    ImageView mIvPortrait;
     @BindView(R.id.tv_name)
     TextView mTvName;
     @BindView(R.id.tv_certified)

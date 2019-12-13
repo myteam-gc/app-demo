@@ -1,23 +1,13 @@
 package com.hnhy.ylfz.mvp.ui.adapter;
 
 import android.content.Context;
-import android.media.MediaPlayer;
-import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.util.Log;
-import android.view.View;
-import android.widget.MediaController;
-import android.widget.VideoView;
 
-import com.bumptech.glide.Glide;
-import com.hnhy.framework.util.FrameworkUtils;
 import com.hnhy.ui.adapter.CommonRecycleAdapter;
 import com.hnhy.ui.adapter.CommonViewHolder;
 import com.hnhy.ylfz.R;
-import com.hnhy.ylfz.mvp.model.bean.Forum;
 import com.hnhy.ylfz.mvp.model.bean.Viewpoint;
-import com.hnhy.ylfz.mvp.ui.widget.NiceImageView;
-import com.hnhy.ylfz.mvp.ui.widget.VideoPlayView;
 import com.hnhy.ylfz.mvp.ui.widget.VideoPlayView2;
 
 import java.util.List;

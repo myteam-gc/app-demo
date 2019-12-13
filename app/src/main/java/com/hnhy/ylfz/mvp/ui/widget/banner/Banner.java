@@ -16,7 +16,7 @@ import android.widget.LinearLayout;
 
 import com.bumptech.glide.Glide;
 import com.hnhy.ylfz.R;
-import com.hnhy.ylfz.mvp.ui.widget.NiceImageView;
+import com.hnhy.ylfz.mvp.ui.widget.CornerImageView;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -148,8 +148,8 @@ public class Banner extends FrameLayout implements ViewPager.OnPageChangeListene
         imageViews.clear();
         createIndicator();
         for (int i = 0; i <= count + 1; i++) {
-            ImageView imageView = new NiceImageView(context);
-            ((NiceImageView) imageView).setCornerRadius(8);
+            ImageView imageView = new CornerImageView(context);
+            ((CornerImageView) imageView).setCornerRadius(8);
             imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
             Object url;
             if (i == 0) {

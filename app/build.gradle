@@ -95,9 +95,9 @@ dependencies {
     implementation 'com.jakewharton:butterknife-compiler:8.8.1'
 
     //下拉刷新空间
-    implementation  'com.scwang.smart:refresh-layout-kernel:2.0.0-alpha-1'
-    implementation  'com.scwang.smart:refresh-header-classics:2.0.0-alpha-1'
-    implementation  'com.scwang.smart:refresh-footer-classics:2.0.0-alpha-1'    //经典加载
+    implementation 'com.scwang.smart:refresh-layout-kernel:2.0.0-alpha-1'
+    implementation 'com.scwang.smart:refresh-header-classics:2.0.0-alpha-1'
+    implementation 'com.scwang.smart:refresh-footer-classics:2.0.0-alpha-1'    //经典加载
 
     //视频播放控件
     // required

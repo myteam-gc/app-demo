@@ -232,7 +232,7 @@ public class ToolBar extends FrameLayout {
         void onLeftClicked();
     }
 
-    interface OnRightClickedListener {
+    public interface OnRightClickedListener {
         void onRightClicked();
     }
 }

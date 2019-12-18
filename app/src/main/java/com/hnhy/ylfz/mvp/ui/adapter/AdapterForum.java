@@ -8,6 +8,7 @@ import com.hnhy.ui.adapter.CommonRecycleAdapter;
 import com.hnhy.ui.adapter.CommonViewHolder;
 import com.hnhy.ylfz.R;
 import com.hnhy.ylfz.mvp.model.bean.Forum;
+import com.hnhy.ylfz.mvp.ui.activity.ActivityPerformanceForumDetail;
 
 import java.util.List;
 
@@ -30,6 +31,7 @@ public class AdapterForum extends CommonRecycleAdapter<Forum> {
         holder.setCommonClickListener(new CommonViewHolder.onItemCommonClickListener() {
             @Override
             public void onItemClickListener(int position) {
+                ActivityPerformanceForumDetail.jump(mContext, data);
             }
 
             @Override

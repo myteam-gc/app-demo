@@ -1,5 +1,6 @@
 package com.hnhy.ylfz.mvp.ui.activity;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -12,6 +13,7 @@ import com.hnhy.framework.frame.BaseActivity;
 import com.hnhy.ui.NoScrollViewPager;
 import com.hnhy.ui.adapter.ViewPageAdapter;
 import com.hnhy.ylfz.R;
+import com.hnhy.ylfz.mvp.ui.activity.msg.ActivityMyMessage;
 import com.hnhy.ylfz.mvp.ui.fragment.HomeFragment;
 import com.hnhy.ylfz.mvp.ui.fragment.KnowledgeFragment;
 import com.hnhy.ylfz.mvp.ui.fragment.MineFragment;
@@ -57,6 +59,7 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
         mVpContent.setAdapter(adapter);
         mVpContent.setOffscreenPageLimit(4);
         mNavView.setOnNavigationItemSelectedListener(this);
+        mToolbar.setOnRightClickedListener(() -> startActivity(new Intent(mContext, ActivityMyMessage.class)));
     }
 
     @Override

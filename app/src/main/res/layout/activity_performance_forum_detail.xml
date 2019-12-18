@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorWhite"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
     tools:context=".mvp.ui.activity.ActivityPerformanceForumDetail">
 
 
@@ -12,8 +14,82 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:title="@string/performance_forum"
-        app:styleType="light"
         app:leftType="finish"
-        />
+        app:styleType="light"
+        app:title="@string/performance_forum" />
+
+    <View style="@style/StyleDivider.Light" />
+
+    <ScrollView
+        android:id="@+id/nsv"
+        style="@style/NoEdgeRecycleView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/StyleCommonText"
+                android:layout_width="match_parent"
+                android:layout_margin="@dimen/dimen_10dp"
+                android:text="@string/str_nul"
+                android:textSize="20sp" />
+
+            <com.hnhy.ui.ExpandableTextView
+                android:id="@+id/etv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_10dp"
+                android:layout_marginRight="@dimen/dimen_10dp"
+                android:text="@string/str_nul"
+                android:textColor="@color/colorBlackLight"
+                app:etv_EnableToggle="false"
+                app:etv_MaxLinesOnShrink="5" />
+
+            <View
+                style="@style/StyleDivider.Light"
+                android:layout_margin="@dimen/dimen_10dp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rcv_content"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#F8F8F8"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:layout_marginBottom="@dimen/dimen_10dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_stroke_white_5dp"
+            android:hint="@string/hint_comment"
+            android:maxLength="500"
+            android:minLines="2"
+            android:padding="@dimen/dimen_5dp" />
+
+        <TextView
+            android:layout_width="@dimen/dimen_80dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/send"
+            android:textColor="@color/colorGrayDark"
+            android:textSize="@dimen/large_text_size" />
+
+    </LinearLayout>
 </LinearLayout>

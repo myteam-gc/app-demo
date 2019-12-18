@@ -82,6 +82,14 @@
             android:name=".mvp.ui.activity.ActivityPerformanceForumDetail"
             android:description="@string/performance_forum"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.ui.activity.msg.ActivityMyMessage"
+            android:description="@string/my_message"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.ui.activity.msg.ActivityMessageDetail"
+            android:description="@string/detail"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

@@ -3,20 +3,20 @@
     <item
         android:id="@+id/tab_one"
         android:icon="@drawable/tab_icon_home"
-        android:title="首页"/>
+        android:title="@string/home" />
 
     <item
         android:id="@+id/tab_two"
         android:icon="@drawable/tab_icon_mine"
-        android:title="知识"/>
+        android:title="@string/knowledge" />
 
     <item
         android:id="@+id/tab_three"
         android:icon="@drawable/tab_icon_mine"
-        android:title="工作"/>
+        android:title="@string/mission" />
 
     <item
         android:id="@+id/tab_four"
         android:icon="@drawable/tab_icon_mine"
-        android:title="我的"/>
+        android:title="@string/mine" />
 </menu>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     style="@style/NoEdgeRecycleView"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -17,6 +16,7 @@
             android:layout_height="180dp"
             android:layout_marginTop="@dimen/dimen_10dp" />
         <com.hnhy.ylfz.mvp.ui.widget.ViewCounterTips
+            android:id="@+id/counter_tips"
             android:layout_marginTop="@dimen/dimen_5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>

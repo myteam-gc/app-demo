@@ -1,10 +1,8 @@
 package com.hnhy.ylfz.mvp.ui.fragment;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -15,6 +13,7 @@ import com.hnhy.ylfz.mvp.ui.activity.ActivityCountryNewsletter;
 import com.hnhy.ylfz.mvp.ui.activity.ActivityDetailInBrowser;
 import com.hnhy.ylfz.mvp.ui.activity.ActivityIndexMonitor;
 import com.hnhy.ylfz.mvp.ui.widget.LooperTextView;
+import com.hnhy.ylfz.mvp.ui.widget.ViewCounterTips;
 import com.hnhy.ylfz.mvp.ui.widget.banner.Banner;
 
 import java.util.ArrayList;
@@ -35,6 +34,8 @@ public class HomeFragment extends BaseFragment {
     Unbinder unbinder;
     @BindView(R.id.tv_monitor_tips)
     LooperTextView mTvMonitorTips;
+    @BindView(R.id.counter_tips)
+    ViewCounterTips mCounterTips;
     @BindView(R.id.ll_country_newsletter)
     LinearLayout mContainerCountryNewsletter;
 
@@ -60,6 +61,7 @@ public class HomeFragment extends BaseFragment {
 
         mTvMonitorTips.setTipList(images);
         loadCountryNewsletter();
+        mCounterTips.setEndDate(2019, 12, 31);
     }
 
     @Override

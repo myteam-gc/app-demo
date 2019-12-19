@@ -16,4 +16,5 @@
         app:leftType="finish"
         />
 
+    <include layout="@layout/layout_common_list" />
 </LinearLayout>

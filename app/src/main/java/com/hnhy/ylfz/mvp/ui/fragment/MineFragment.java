@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.hnhy.framework.frame.BaseFragment;
 import com.hnhy.ylfz.R;
 import com.hnhy.ylfz.mvp.ui.activity.ActivityDetailInBrowser;
+import com.hnhy.ylfz.mvp.ui.activity.ActivityFeedback;
 import com.hnhy.ylfz.mvp.ui.activity.consult.ActivityConsultService;
 import com.hnhy.ylfz.mvp.ui.activity.user.ActivityModifyPwd;
 
@@ -63,6 +64,7 @@ public class MineFragment extends BaseFragment {
                 ActivityModifyPwd.jump(mContext);
                 break;
             case R.id.rl_feedback:
+                startActivity(new Intent(mContext, ActivityFeedback.class));
                 break;
             case R.id.rl_about:
                 ActivityDetailInBrowser.showDetail(mContext, "http://huiyunit.com/about.html#0", "关于");

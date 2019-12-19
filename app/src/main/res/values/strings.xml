@@ -53,5 +53,10 @@
     <string name="my_message">我的消息</string>
     <string name="send">发送</string>
     <string name="hint_comment">写评论(最多500字)</string>
+    <string name="form_subject">填报项</string>
+    <string name="value">值</string>
+    <string name="warning_value">警戒值</string>
+    <string name="suggestion_for_improvement">改进建议</string>
+    <string name="hint_feedback">请在此处填写您对我们产品与服务的建议，以便我们改进。</string>
 
 </resources>

@@ -6,13 +6,13 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.EditText;
 
-import com.hnhy.ylfz.R;
-import com.hnhy.ylfz.mvp.contract.ContractModifyPwd;
-import com.hnhy.ylfz.mvp.presenter.PresenterModifyPwd;
 import com.hnhy.framework.frame.BaseActivity;
 import com.hnhy.framework.system.SystemPager;
 import com.hnhy.framework.system.net.Response;
 import com.hnhy.framework.util.FrameworkUtils;
+import com.hnhy.ylfz.R;
+import com.hnhy.ylfz.mvp.contract.ContractModifyPwd;
+import com.hnhy.ylfz.mvp.presenter.PresenterModifyPwd;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -43,6 +43,7 @@ public class ActivityModifyPwd extends BaseActivity implements ContractModifyPwd
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setLightStatusBar();
         setContentView(R.layout.activity_modify_pwd);
         ButterKnife.bind(this);
         mPresenter = new PresenterModifyPwd(this);

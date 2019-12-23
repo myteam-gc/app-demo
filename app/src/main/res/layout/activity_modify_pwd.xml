@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:fitsSystemWindows="true"
     android:orientation="vertical"
     tools:context=".mvp.ui.activity.user.ActivityModifyPwd">
 
@@ -11,6 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:leftType="finish"
+        app:styleType="light"
         app:title="@string/str_title_modify_pwd" />
 
     <LinearLayout
@@ -97,7 +100,9 @@
     <Button
         android:id="@+id/btn_pwd_save"
         style="@style/StyleCommonBtn"
+        android:layout_height="@dimen/dimen_40dp"
         android:layout_margin="@dimen/dimen_30dp"
+        android:background="@drawable/bg_btn_commit"
         android:text="@string/str_save" />
 
 </LinearLayout>

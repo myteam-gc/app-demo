@@ -9,6 +9,7 @@ import android.widget.LinearLayout;
 import com.hnhy.framework.frame.BaseFragment;
 import com.hnhy.framework.system.SystemImageLoader;
 import com.hnhy.ylfz.R;
+import com.hnhy.ylfz.app.Constant;
 import com.hnhy.ylfz.mvp.ui.activity.ActivityCountryNewsletter;
 import com.hnhy.ylfz.mvp.ui.activity.ActivityDetailInBrowser;
 import com.hnhy.ylfz.mvp.ui.activity.ActivityIndexMonitor;
@@ -56,7 +57,7 @@ public class HomeFragment extends BaseFragment {
         };
         mBanner.setImages(images).setAutoPlay(true).start();
         mBanner.setOnPageClickListener((index) ->
-                showToast("点击了" + index)
+                ActivityDetailInBrowser.showDetail(mContext, Constant.URL_WJW, "国考快讯")
         );
 
         mTvMonitorTips.setTipList(images);

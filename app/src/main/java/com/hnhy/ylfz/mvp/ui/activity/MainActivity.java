@@ -9,6 +9,7 @@ import android.support.v4.app.Fragment;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.hnhy.framework.Engine;
 import com.hnhy.framework.frame.BaseActivity;
 import com.hnhy.ui.NoScrollViewPager;
 import com.hnhy.ui.adapter.ViewPageAdapter;
@@ -35,6 +36,7 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
     @BindView(R.id.toolbar)
     ToolBar mToolbar;
     private int mCurrentPage = 0;
+    private long mTimeMillisPressed;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,5 +91,15 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
         mToolbar.setTitle(titleId);
         mVpContent.setCurrentItem(mCurrentPage);
         return true;
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (System.currentTimeMillis() - mTimeMillisPressed > 2000) {
+            showToast("再次点击，退出程序");
+            mTimeMillisPressed = System.currentTimeMillis();
+        } else {
+            Engine.getInstance().exitApp();
+        }
     }
 }

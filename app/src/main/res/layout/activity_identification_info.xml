@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".mvp.ui.activity.MainActivity">
+
+    <com.hnhy.ylfz.mvp.ui.widget.ToolBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:leftType="finish"
+        app:styleType="light"
+        app:title="@string/identification_info" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dimen_10dp"
+            android:paddingRight="@dimen/dimen_10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/dimen_50dp"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_10dp">
+
+                <TextView
+                    style="@style/StyleCommonText.GrayDark"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/name" />
+
+                <TextView
+                    style="@style/StyleCommonText.GrayDark"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="@string/str_nul" />
+            </LinearLayout>
+
+            <View style="@style/StyleDivider.Light" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/dimen_50dp"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_10dp">
+
+                <TextView
+                    style="@style/StyleCommonText.GrayDark"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/gender" />
+
+                <TextView
+                    style="@style/StyleCommonText.GrayDark"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="@string/str_nul" />
+            </LinearLayout>
+
+            <View style="@style/StyleDivider.Light" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/dimen_50dp"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_10dp">
+
+                <TextView
+                    style="@style/StyleCommonText.GrayDark"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/hospital_name" />
+
+                <TextView
+                    style="@style/StyleCommonText.GrayDark"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="@string/str_nul" />
+            </LinearLayout>
+
+            <View style="@style/StyleDivider.Light" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/dimen_50dp"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_10dp">
+
+                <TextView
+                    style="@style/StyleCommonText.GrayDark"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/department" />
+
+                <TextView
+                    style="@style/StyleCommonText.GrayDark"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="@string/str_nul" />
+            </LinearLayout>
+
+            <View style="@style/StyleDivider.Light" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/dimen_50dp"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_10dp">
+
+                <TextView
+                    style="@style/StyleCommonText.GrayDark"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/office" />
+
+                <TextView
+                    style="@style/StyleCommonText.GrayDark"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="@string/str_nul" />
+            </LinearLayout>
+
+            <View style="@style/StyleDivider.Light" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/dimen_50dp"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_10dp">
+
+                <TextView
+                    style="@style/StyleCommonText.GrayDark"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/department_telephone" />
+
+                <TextView
+                    style="@style/StyleCommonText.GrayDark"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="@string/str_nul" />
+            </LinearLayout>
+
+            <View style="@style/StyleDivider.Light" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/dimen_50dp"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_10dp">
+
+                <TextView
+                    style="@style/StyleCommonText.GrayDark"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/province_city" />
+
+                <TextView
+                    android:id="@+id/tv_province_city"
+                    style="@style/StyleCommonText.GrayDark"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="@string/str_nul" />
+            </LinearLayout>
+
+            <View style="@style/StyleDivider.Light" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/dimen_50dp"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_10dp">
+
+                <TextView
+                    style="@style/StyleCommonText.GrayDark"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/related_documents" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen_10dp">
+
+                <ImageView
+                    android:id="@+id/iv1"
+                    android:layout_width="150dp"
+                    android:layout_height="90dp"
+                    android:padding="@dimen/dimen_3dp"
+                    android:src="@color/colorPrimary" />
+
+                <ImageView
+                    android:id="@+id/iv2"
+                    android:layout_width="150dp"
+                    android:layout_height="90dp"
+                    android:layout_toRightOf="@+id/iv1"
+                    android:padding="@dimen/dimen_3dp"
+                    android:src="@color/colorPrimary" />
+
+                <ImageView
+                    android:id="@+id/iv3"
+                    android:layout_width="150dp"
+                    android:layout_height="90dp"
+                    android:layout_below="@+id/iv1"
+                    android:padding="@dimen/dimen_3dp"
+                    android:src="@color/colorPrimary" />
+
+                <ImageView
+                    android:id="@+id/iv4"
+                    android:layout_width="150dp"
+                    android:layout_height="90dp"
+                    android:layout_below="@+id/iv1"
+                    android:layout_toRightOf="@id/iv3"
+                    android:padding="@dimen/dimen_3dp"
+                    android:src="@color/colorPrimary" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

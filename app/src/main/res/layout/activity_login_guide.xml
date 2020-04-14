@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".mvp.ui.activity.user.ActivityLoginGuide">
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="@dimen/dimen_80dp"
+        android:layout_height="@dimen/dimen_80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="140dp"
+        android:background="@drawable/icon_logo" />
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/hospital_performance_auxiliary_sys"
+        android:textColor="#C9CDD9"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/btn_register"
+        style="@style/StyleButton"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/dimen_30dp"
+        android:layout_marginRight="@dimen/dimen_30dp"
+        android:layout_marginBottom="@dimen/dimen_50dp"
+        android:background="@drawable/selector_oval_btn_click_bg_register"
+        android:text="@string/str_register"
+        android:textColor="#999AA0" />
+
+    <Button
+        android:id="@+id/btn_login"
+        style="@style/StyleButton"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/btn_register"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/dimen_30dp"
+        android:layout_marginRight="@dimen/dimen_30dp"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        android:background="@drawable/selector_oval_btn_click_bg_large"
+        android:text="@string/str_login" />
+
+</RelativeLayout>

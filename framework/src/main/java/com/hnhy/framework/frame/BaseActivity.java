@@ -31,6 +31,7 @@ public class BaseActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mContext = this;
+        setLightStatusBar();
         getSystem(SystemPager.class).addActivity(this);
     }
 

@@ -243,6 +243,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         app:mulLineHint="false"
+                        android:visibility="gone"
                         app:topIconMargin="@dimen/dimen_25dp" />
 
                     <android.support.v7.widget.RecyclerView

@@ -94,7 +94,7 @@ public class FrameworkUtils {
         Uri fileUri;
         if (Build.VERSION.SDK_INT >= 24) {
             fileUri = FileProvider.getUriForFile(Engine.getInstance().mContext,
-                    Engine.getInstance().mContext.getPackageName() + ".android7.fileprovider",
+                    Engine.getInstance().mContext.getPackageName() + ".provider",
                     file);
         } else {
             fileUri = Uri.fromFile(file);

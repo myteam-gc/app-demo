@@ -12,6 +12,7 @@ import com.hnhy.framework.frame.BaseFragment;
 import com.hnhy.ylfz.R;
 import com.hnhy.ylfz.mvp.ui.activity.ActivityDetailInBrowser;
 import com.hnhy.ylfz.mvp.ui.activity.ActivityFeedback;
+import com.hnhy.ylfz.mvp.ui.activity.ActivityIdentificationInfo;
 import com.hnhy.ylfz.mvp.ui.activity.consult.ActivityConsultService;
 import com.hnhy.ylfz.mvp.ui.activity.user.ActivityModifyPwd;
 
@@ -54,11 +55,14 @@ public class MineFragment extends BaseFragment {
         unbinder.unbind();
     }
 
-    @OnClick({R.id.rl_consult, R.id.rl_modify_pwd, R.id.rl_feedback, R.id.rl_about})
+    @OnClick({R.id.rl_consult, R.id.tv_certified, R.id.rl_modify_pwd, R.id.rl_feedback, R.id.rl_about})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.rl_consult:
                 startActivity(new Intent(mContext, ActivityConsultService.class));
+                break;
+            case R.id.tv_certified://认证信息
+                ActivityIdentificationInfo.jump(mContext);
                 break;
             case R.id.rl_modify_pwd:
                 ActivityModifyPwd.jump(mContext);

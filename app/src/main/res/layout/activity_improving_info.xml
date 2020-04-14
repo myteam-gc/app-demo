@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".mvp.ui.activity.user.ActivityImprovingInfo">
+
+    <com.hnhy.ylfz.mvp.ui.widget.ToolBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:leftType="finish"
+        app:styleType="light"
+        app:title="@string/improving_info" />
+
+    <FrameLayout
+        android:layout_width="@dimen/dimen_80dp"
+        android:layout_height="@dimen/dimen_80dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dimen_30dp">
+
+        <com.hnhy.ylfz.mvp.ui.widget.CornerImageView
+            android:id="@+id/iv_portrait"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/icon_portrait"
+            app:is_circle="true" />
+
+        <ImageView
+            android:id="@+id/iv_camera"
+            android:layout_width="@dimen/dimen_30dp"
+            android:layout_height="@dimen/dimen_30dp"
+            android:layout_gravity="bottom|right"
+            android:src="@drawable/icon_camera" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_30dp"
+        android:layout_marginTop="@dimen/dimen_60dp"
+        android:layout_marginRight="@dimen/dimen_30dp"
+        android:background="@drawable/shape_stroke_white"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <EditText
+            android:id="@+id/et_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:digits="0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"
+            android:hint="请输入用户名"
+            android:maxLength="11"
+            android:paddingTop="@dimen/common_padding"
+            android:paddingBottom="@dimen/common_padding"
+            android:textColor="@color/colorGrayDark"
+            android:textColorHint="#C9CDD9"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/middle_text_size" />
+
+        <ImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/icon_delete"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <View
+        style="@style/StyleDivider.Light"
+        android:layout_marginLeft="@dimen/dimen_30dp"
+        android:layout_marginRight="@dimen/dimen_30dp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_30dp"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:layout_marginRight="@dimen/dimen_30dp"
+        android:background="@drawable/shape_stroke_white">
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:digits="0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"
+            android:hint="请输入密码"
+            android:inputType="textPassword"
+            android:maxLength="20"
+            android:paddingTop="@dimen/common_padding"
+            android:paddingBottom="@dimen/common_padding"
+            android:textColor="@color/colorGrayDark"
+            android:textColorHint="#C9CDD9"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/middle_text_size" />
+
+        <ImageView
+            android:id="@+id/iv_show_password"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <View
+        style="@style/StyleDivider.Light"
+        android:layout_marginLeft="@dimen/dimen_30dp"
+        android:layout_marginRight="@dimen/dimen_30dp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_30dp"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:layout_marginRight="@dimen/dimen_30dp"
+        android:background="@drawable/shape_stroke_white">
+
+        <EditText
+            android:id="@+id/et_password_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:digits="0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"
+            android:hint="请再次输入密码"
+            android:inputType="textPassword"
+            android:maxLength="20"
+            android:paddingTop="@dimen/common_padding"
+            android:paddingBottom="@dimen/common_padding"
+            android:textColor="@color/colorGrayDark"
+            android:textColorHint="#C9CDD9"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/middle_text_size" />
+
+        <ImageView
+            android:id="@+id/iv_show_password_confirm"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <View
+        style="@style/StyleDivider.Light"
+        android:layout_marginLeft="@dimen/dimen_30dp"
+        android:layout_marginRight="@dimen/dimen_30dp" />
+
+    <Button
+        android:id="@+id/btn_finish"
+        style="@style/StyleButton"
+        android:layout_width="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/dimen_30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="@dimen/dimen_30dp"
+        android:layout_marginBottom="@dimen/common_padding"
+        android:background="@drawable/selector_oval_btn_click_bg_large"
+        android:enabled="false"
+        android:text="@string/str_finish" />
+</LinearLayout>

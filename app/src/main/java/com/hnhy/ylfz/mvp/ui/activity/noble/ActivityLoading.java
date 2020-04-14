@@ -7,7 +7,7 @@ import android.support.annotation.Nullable;
 import com.hnhy.framework.frame.BaseActivity;
 import com.hnhy.ylfz.R;
 import com.hnhy.ylfz.app.SharedPreferencesManager;
-import com.hnhy.ylfz.mvp.ui.activity.MainActivity;
+import com.hnhy.ylfz.mvp.ui.activity.user.ActivityLoginGuide;
 
 import java.util.concurrent.TimeUnit;
 
@@ -54,7 +54,7 @@ public class ActivityLoading extends BaseActivity {
                             Intent it = new Intent(ActivityLoading.this, ActivityGuide.class);
                             startActivity(it);
                         } else {
-                            Intent it = new Intent(ActivityLoading.this, MainActivity.class);
+                            Intent it = new Intent(ActivityLoading.this, ActivityLoginGuide.class);
                             if (getIntent().getExtras() != null) {
                                 it.putExtras(getIntent().getExtras());
                             }

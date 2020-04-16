@@ -12,6 +12,7 @@ import android.widget.ImageView;
 
 import com.hnhy.framework.frame.BaseActivity;
 import com.hnhy.ylfz.R;
+import com.hnhy.ylfz.mvp.ui.activity.MainActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -70,6 +71,7 @@ public class ActivityLogin extends BaseActivity {
                 clearUsername();
                 break;
             case R.id.tv_forget_password:
+                startActivity(new Intent(this, MainActivity.class));
                 break;
             case R.id.btn_login:
                 break;

@@ -108,6 +108,24 @@ public class ToolBar extends FrameLayout {
         this.mOnRightClickedListener = onRightClickedListener;
     }
 
+    /**
+     * 设置背景色
+     *
+     * @param color 颜色
+     */
+    public void setBackgroundColor(int color) {
+        mRlHeaderRoot.setBackground(new ColorDrawable(color));
+    }
+
+    /**
+     * 设置有图标背景
+     *
+     * @param id R.drawable.dra
+     */
+    public void setRightIconId(int id) {
+        mRightIconId = id;
+        mIvFunctionRight.setBackgroundResource(mRightIconId);
+    }
     private void initAttrs(Context context, AttributeSet attrs) {
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.ToolBar);
         mStyleType = a.getInt(R.styleable.ToolBar_styleType,0);
@@ -210,6 +228,10 @@ public class ToolBar extends FrameLayout {
         mTvTitle.setText(mTitle);
     }
 
+    public void setTitleColor(int colorId) {
+        mTitleTextColor = getResources().getColor(colorId);
+        mTvTitle.setTextColor(mTitleTextColor);
+    }
     /**
      * 设置为透明背景
      */

@@ -8,7 +8,7 @@
     <RelativeLayout
         android:id="@+id/rl_function_left"
         android:layout_height="@dimen/height_title"
-        android:layout_width="@dimen/height_title">
+        android:layout_width="@dimen/dimen_30dp">
 
         <ImageView
             android:id="@+id/iv_function_left"
@@ -35,7 +35,7 @@
         style="@style/ToolbarTitle"
         android:layout_centerVertical="true"
         android:singleLine="true"
-        android:layout_marginLeft="@dimen/dimen_10dp"
+        android:layout_marginLeft="@dimen/dimen_20dp"
         android:layout_toRightOf="@+id/rl_function_left"
         android:textColor="@color/colorBlackLight"
         android:text="@string/str_nul" />
@@ -52,7 +52,6 @@
             android:layout_width="@dimen/dimen_20dp"
             android:layout_height="@dimen/dimen_20dp"
             android:layout_centerInParent="true"
-            android:backgroundTint="@color/colorBlackLight"
             android:background="@drawable/selector_btn_more" />
 
         <ImageView

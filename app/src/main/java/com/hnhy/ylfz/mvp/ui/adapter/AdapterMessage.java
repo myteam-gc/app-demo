@@ -3,7 +3,6 @@ package com.hnhy.ylfz.mvp.ui.adapter;
 import android.content.Context;
 import android.widget.ImageView;
 
-import com.bumptech.glide.Glide;
 import com.hnhy.ui.adapter.CommonRecycleAdapter;
 import com.hnhy.ui.adapter.CommonViewHolder;
 import com.hnhy.ylfz.R;
@@ -28,7 +27,7 @@ public class AdapterMessage extends CommonRecycleAdapter<Message> {
                 .setText(R.id.tv_date, data.date)
                 .setText(R.id.tv_message, data.content);
         ImageView imageView = holder.getView(R.id.iv_img);
-        Glide.with(mContext).load(data.picUrl).into(imageView);
+        imageView.setBackgroundResource(data.type == 0 ? R.drawable.icon_identity_apply : R.drawable.icon_warning);
         holder.setCommonClickListener(new CommonViewHolder.onItemCommonClickListener() {
             @Override
             public void onItemClickListener(int position) {

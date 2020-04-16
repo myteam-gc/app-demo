@@ -8,24 +8,28 @@
 
     <com.hnhy.ylfz.mvp.ui.widget.ToolBar
         android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:leftType="finish"
         app:styleType="light"
-        app:title="@string/country_newsletter"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        app:title="@string/country_newsletter" />
+
     <android.support.design.widget.TabLayout
         android:id="@+id/tab_title"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:minHeight="@dimen/dimen_50dp"/>
-    <View
-        style="@style/StyleDivider.Light"
-        android:layout_marginTop="@dimen/dimen_2dp"
-        android:layout_marginLeft="@dimen/dimen_30dp"
-        android:layout_marginRight="@dimen/dimen_30dp"/>
+        android:minHeight="@dimen/dimen_50dp"
+        app:tabBackground="@color/colorWhite"
+        app:tabIndicatorFullWidth="false"
+        app:tabRippleColor="@color/transparent"
+        app:tabTextColor="@color/tab_text_color" />
+
+    <View style="@style/StyleDivider.Light" />
+
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:background="#F5F1F9" />
 </LinearLayout>

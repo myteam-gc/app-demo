@@ -9,7 +9,7 @@
         android:id="@+id/tv_title"
         style="@style/StyleCommonText"
         android:layout_gravity="center_horizontal"
-        android:text="2019年度三级公立医院绩效考核"
+        android:text="2020年度三级公立医院绩效考核"
         android:textSize="@dimen/large_text_size"
         android:textStyle="bold" />
 

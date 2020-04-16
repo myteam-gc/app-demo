@@ -62,7 +62,7 @@ public class HomeFragment extends BaseFragment {
 
         mTvMonitorTips.setTipList(images);
         loadCountryNewsletter();
-        mCounterTips.setEndDate(2019, 12, 31);
+        mCounterTips.setEndDate(2020, 6, 25);
     }
 
     @Override

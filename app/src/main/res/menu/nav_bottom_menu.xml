@@ -7,12 +7,12 @@
 
     <item
         android:id="@+id/tab_two"
-        android:icon="@drawable/tab_icon_mine"
+        android:icon="@drawable/tab_icon_knowledge"
         android:title="@string/knowledge" />
 
     <item
         android:id="@+id/tab_three"
-        android:icon="@drawable/tab_icon_mine"
+        android:icon="@drawable/tab_icon_knowledge"
         android:title="@string/mission" />
 
     <item

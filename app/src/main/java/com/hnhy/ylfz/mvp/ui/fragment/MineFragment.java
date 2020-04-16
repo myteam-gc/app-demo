@@ -71,7 +71,7 @@ public class MineFragment extends BaseFragment {
                 startActivity(new Intent(mContext, ActivityFeedback.class));
                 break;
             case R.id.rl_about:
-                ActivityDetailInBrowser.showDetail(mContext, "http://huiyunit.com/about.html#0", "关于");
+                ActivityDetailInBrowser.showDetail(mContext, "http://huiyunit.com/about.html#0", getString(R.string.str_about));
                 break;
         }
     }

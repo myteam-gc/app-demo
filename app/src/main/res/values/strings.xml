@@ -31,8 +31,9 @@
     <string name="str_uncertified">未认证</string>
     <string name="str_consult">专家咨询</string>
     <string name="str_consult_service">咨询服务</string>
-    <string name="str_my_feedback">我的反馈</string>
-    <string name="str_about">关于</string>
+    <string name="str_my_feedback">问题反馈</string>
+    <string name="str_about">关于我们</string>
+    <string name="str_setting">设置</string>
     <string name="str_search">搜索</string>
     <string name="index_monitor">指标监控</string>
     <string name="warning_index">警戒指标</string>

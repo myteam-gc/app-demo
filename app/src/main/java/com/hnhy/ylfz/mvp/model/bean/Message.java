@@ -25,6 +25,7 @@ public class Message implements Parcelable {
     public String title;//标题
     public String content;//内容
     public String picUrl = Constant.DEFAULT_PICTURE;//图片url
+    public int type;//0:认证申请 1：指标预警
 
     public Message() {
     }
@@ -34,6 +35,7 @@ public class Message implements Parcelable {
         this.title = in.readString();
         this.content = in.readString();
         this.picUrl = in.readString();
+        this.type = in.readInt();
     }
 
     @Override
@@ -47,5 +49,6 @@ public class Message implements Parcelable {
         dest.writeString(this.title);
         dest.writeString(this.content);
         dest.writeString(this.picUrl);
+        dest.writeInt(this.type);
     }
 }

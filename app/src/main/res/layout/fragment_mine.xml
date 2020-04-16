@@ -8,29 +8,31 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="120dp"
+        android:background="@color/colorBlueBg"
         android:orientation="horizontal">
 
         <com.hnhy.ylfz.mvp.ui.widget.CornerImageView
             android:id="@+id/iv_portrait"
-            android:layout_width="@dimen/dimen_70dp"
-            android:layout_height="@dimen/dimen_70dp"
+            android:layout_width="@dimen/dimen_80dp"
+            android:layout_height="@dimen/dimen_80dp"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="@dimen/dimen_40dp"
+            android:layout_marginLeft="@dimen/dimen_20dp"
             android:src="@drawable/icon_portrait"
             app:is_circle="true" />
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             android:layout_marginLeft="@dimen/dimen_20dp">
 
             <TextView
                 android:id="@+id/tv_name"
-                style="@style/StyleCommonText"
-                android:text="@string/str_nul"
-                android:textSize="18sp"
-                app:layout_constraintBottom_toBottomOf="@id/tv_certified"
+                style="@style/StyleCommonText.White"
+                android:text="谢理鹏"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toTopOf="@id/tv_certified"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -39,24 +41,24 @@
                 android:layout_height="@dimen/dimen_30dp"
                 android:layout_marginStart="@dimen/dimen_5dp"
                 android:src="@drawable/icon_vip"
-                app:layout_constraintBottom_toBottomOf="@id/tv_certified"
                 app:layout_constraintStart_toEndOf="@id/tv_name"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/tv_certified"
                 style="@style/StyleCommonText.White"
+                android:layout_marginTop="@dimen/dimen_5dp"
                 android:background="@drawable/shape_oval_red"
                 android:backgroundTint="@color/colorGreen"
-                android:drawableLeft="@drawable/icon_cross"
                 android:gravity="center_vertical"
-                android:paddingLeft="@dimen/dimen_6dp"
-                android:paddingRight="@dimen/dimen_6dp"
+                android:paddingLeft="@dimen/dimen_8dp"
+                android:paddingTop="@dimen/dimen_4dp"
+                android:paddingRight="@dimen/dimen_8dp"
+                android:paddingBottom="@dimen/dimen_4dp"
                 android:text="@string/str_certified"
-                android:textSize="18sp"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@id/tv_name" />
+                app:layout_constraintTop_toBottomOf="@id/tv_name" />
         </android.support.constraint.ConstraintLayout>
     </LinearLayout>
 
@@ -98,14 +100,16 @@
         style="@style/StyleDivider"
         android:layout_marginLeft="@dimen/dimen_10dp"
         android:layout_marginRight="@dimen/dimen_10dp"
-        android:background="@color/colorBg_f8" />
+        android:background="@color/colorBg_f8"
+        android:visibility="gone" />
 
     <RelativeLayout
         android:id="@+id/rl_modify_pwd"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dimen_50dp"
         android:paddingLeft="@dimen/dimen_10dp"
-        android:paddingRight="@dimen/dimen_10dp">
+        android:paddingRight="@dimen/dimen_10dp"
+        android:visibility="gone">
 
         <ImageView
             android:layout_width="@dimen/dimen_25dp"
@@ -189,6 +193,41 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="@dimen/dimen_35dp"
             android:text="@string/str_about" />
+
+        <ImageView
+            android:layout_width="@dimen/dimen_15dp"
+            android:layout_height="@dimen/dimen_15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_5dp"
+            android:src="@drawable/arrow_right" />
+    </RelativeLayout>
+
+    <View
+        style="@style/StyleDivider"
+        android:layout_marginLeft="@dimen/dimen_10dp"
+        android:layout_marginRight="@dimen/dimen_10dp"
+        android:background="@color/colorBg_f8" />
+
+    <RelativeLayout
+        android:id="@+id/rl_setting"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50dp"
+        android:paddingLeft="@dimen/dimen_10dp"
+        android:paddingRight="@dimen/dimen_10dp">
+
+        <ImageView
+            android:layout_width="@dimen/dimen_25dp"
+            android:layout_height="@dimen/dimen_25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_5dp"
+            android:src="@drawable/icon_setting" />
+
+        <TextView
+            style="@style/StyleCommonText"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_35dp"
+            android:text="@string/str_setting" />
 
         <ImageView
             android:layout_width="@dimen/dimen_15dp"

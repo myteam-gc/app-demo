@@ -46,9 +46,6 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
         mNavView.setLabelVisibilityMode(1);
         initView();
         getWindow().setStatusBarColor(getResources().getColor(R.color.colorWhite));
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            this.getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
-        }
     }
 
     private void initView() {
@@ -67,7 +64,7 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         int pos = 0;
-        int titleId = R.string.home;
+        int titleId = R.string.app_name;
         switch (menuItem.getItemId()) {
             case R.id.tab_one:
                 pos = 0;
@@ -88,8 +85,9 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
         }
         if (mCurrentPage == pos) return true;
         mCurrentPage = pos;
-        mToolbar.setTitle(titleId);
         mVpContent.setCurrentItem(mCurrentPage);
+        mToolbar.setTitle(titleId);
+        setToolBar(mCurrentPage);
         return true;
     }
 
@@ -100,6 +98,27 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
             mTimeMillisPressed = System.currentTimeMillis();
         } else {
             Engine.getInstance().exitApp();
+        }
+    }
+
+    private void setToolBar(int index) {
+        mToolbar.setBackgroundColor(index == 3 ? getResources().getColor(R.color.colorBlueBg) : getResources().getColor(R.color.colorWhite));
+        mToolbar.setTitleColor(index == 3 ? R.color.colorBlueBg : R.color.colorBlack);
+        mToolbar.setRightIconId(index == 3 ? R.drawable.selector_btn_msg_white : R.drawable.selector_btn_msg);
+        if (index == 3) {
+            setDarkStatusBar();
+        } else {
+            setLightStatusBar();
+        }
+    }
+
+    /**
+     * 设置蓝底状态栏
+     */
+    private void setDarkStatusBar() {
+        getWindow().setStatusBarColor(getResources().getColor(R.color.colorBlueBg));
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            this.getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
         }
     }
 }

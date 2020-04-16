@@ -46,9 +46,15 @@ public class ActivityMyMessage extends BaseActivity {
 
     private void loadData() {
         Message message = new Message();
-        message.date = "2019-11-05";
-        message.title = "您提交的认证申请已通过";
+        message.date = "2019-11-05 10:22";
+        message.title = "认证申请";
         message.content = "您提交的认证申请已通过";
+        mDatas.add(message);
+        message = new Message();
+        message.type = 1;
+        message.date = "2019-10-30 16:22";
+        message.title = "指标警戒";
+        message.content = "您好，当前指标已经超过预定目标！";
         mDatas.add(message);
         mAdapter.notifyDataSetChanged();
         mViewNoData.setVisibility(mAdapter.getItemCount() > 0 ? View.GONE : View.VISIBLE);
